@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ExcelMerge">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ExcelMerge.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

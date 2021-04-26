@@ -1,9 +1,15 @@
 echo on
 
 cd tables\gen
-java -jar ExcelMerge.jar 1
+del ..\Floder\index.txt
+call easyExcel.bat
+del /q /s ..\data\csv\*.*
+java -cp ExcelMerge.jar com.pch.office.csv.ExcelToCSV ../data/csv/ ../ a
+if %ERRORLEVEL% NEQ 0 (
+    pause
+)
 
-cd ..\..\tools\CSharpPackSQLite\bin\
-CSharpPack.exe ..\..\..\tables tmpl ..\..\..\output\public ..\..\..\output\client
+call csvToDB.bat
+call csvTolua.bat
 
 pause

@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+group 'com.pch'
+version ''
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+//    maven {
+//        url = "http://172.18.192.9:10081/repository/maven-public/"
+//        credentials {
+//            username 'builder'
+//            password 'Clover.sb'
+//        }
+//    }
+}
+
+dependencies {
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.28.0'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    compile group: 'org.freemarker', name: 'freemarker', version: '2.3.20'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'com.alibaba', name: 'easyexcel', version: '2.1.6'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.60'
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.6'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
+
+jar {
+    manifest {
+        attributes(
+                "Manifest-Version": 1.0,
+                "Main-Class": "com.pch.office.main.MainMerge"
+        )
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}

@@ -1,0 +1,3 @@
+ConfItem=Item.xlsx
+ConfServerInfo=ServerInfo.xlsx
+ConfBagClass=Item.xlsx

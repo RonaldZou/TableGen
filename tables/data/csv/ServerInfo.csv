@@ -1,0 +1,11 @@
+﻿"cs","csi","csi","s","si","cs","cs","cs","s","s","s","s","s","s","cs","cs","s","cs"
+"int","int","String","String","String","String","String","int","int","String","String","int","int","int","int","int","int[]","int"
+"sn","serverId","type","version","disparkGroup","name","ip","clientPort","zmpPort","createTime","clientCreateTime","loginMaxQueue","loginMaxOnline","registerMax","recommend","status","subServers","order"
+"自增SN","SN
+服务器ID","类型","type=apptest时填version","服务器列表开放组","服务器名","HOST","客户端端口","zmq端口","开服时间","客户端显示开服时间","最大同时登陆人数","最大同时在线人数","最大注册人数","是否推荐","是否开启
+1=正常
+2=拥挤
+3=爆满
+4=维护
+5=未开服","合过的服","排序权重"
+"1","1","appOnline","1.0.0","1","测试-1服","127.0.0.1","10001","14001","2019-08-28 10:00:00","2019-08-28 10:00:00","100","6000","20000","1","1","","1"

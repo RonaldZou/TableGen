@@ -3,3 +3,6 @@ Debug
 *.user
 *obj
 *.suo
+build
+out
+.gradle
